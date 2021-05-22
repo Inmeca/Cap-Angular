@@ -1,0 +1,45 @@
+
+    
+<div class="container">   
+    <div class="movie-form" [formGroup]="formMovie">
+
+
+        <h1>{{title}}</h1>
+
+        <mat-form-field>
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" placeholder="Nombre de pelicula" formControlName = "name" />
+            
+            <mat-error *ngIf="formMovie.get('name')?.errors?.required ">
+                El nombre es requerido
+            </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <input matInput type="text" placeholder="Categoria" formControlName = "category" />
+            
+            <mat-error *ngIf="formMovie.get('category')?.errors?.required ">
+                La categoria es requerida
+            </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Duración</mat-label>
+            <input matInput type="text" placeholder="Duracion" formControlName = "duration" />
+            
+            <mat-error *ngIf="formMovie.get('duration')?.errors?.required ">
+                La duración es requerida
+            </mat-error>
+
+        </mat-form-field>
+    
+        
+    
+        <button mat-raised-button color="primary" (click)="save()" [disabled]="formMovie.invalid || disableButton">
+            Enviar
+        </button>
+    </div>
+</div> 

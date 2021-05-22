@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.div-home{
+    display: flex;
+    flex-direction: column;
+    width:  90%;
+    margin-top: 50px;
+}
+
+table{
+    width:  100%;
+}

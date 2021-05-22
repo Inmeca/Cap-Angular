@@ -12,12 +12,20 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MovieComponent } from './movie/movie.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    HomeComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,11 @@ import { ContactComponent } from './contact/contact.component';
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatProgressBarModule,
+    MatTableModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
